@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --black: #24262f;
+  --white: #fcfcfd;
+}
+html,
+body {
+  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
+  background-color: #fcfcfd;
+  color: var(--black) !important;
+}
+body {
+  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
+  color: var(--black) !important;
+  background-color: #fcfcfd;
+  font-size: 1.125rem;
+}
+
+p-button > button {
+  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
+}
