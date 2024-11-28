@@ -1,0 +1,30 @@
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", "Poppins Placeholder", sans-serif;
+}
+
+.img-div {
+  background-image: url("../../../assets/images/chat.png");
+  width: 2.2rem;
+  height: 2.2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.img-div:hover {
+  opacity: 0.75;
+  transition: linear 0.2ms;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-title {
+  font-weight: bold;
+}

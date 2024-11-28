@@ -1,0 +1,18 @@
+<p-toolbar>
+  <div class="p-toolbar-group-start nav-items">
+    <span class="pointer purple-hover nav-title">{{ LABELS.TITLE }}</span>
+  </div>
+  <div class="p-toolbar-group-center nav-links">
+    @for(items of navItems; track items){
+    <span
+      class="pointer purple-hover"
+      [routerLink]="'/' + items"
+      routerLinkActive="active"
+      >{{ items }}</span
+    >
+    }
+  </div>
+  <div class="p-toolbar-group-end">
+    <div class="img-div pointer"></div>
+  </div>
+</p-toolbar>
