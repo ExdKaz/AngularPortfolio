@@ -86,6 +86,14 @@ h2 {
   justify-content: center;
 }
 
+.img-container-1 > p-image > span > img {
+  width: 380px;
+}
+
+.img-container-2 > p-image > span > img {
+  width: 570px;
+}
+
 @media only screen and (min-width: 1920px) {
   body {
     padding: 0 20rem;
@@ -94,5 +102,31 @@ h2 {
   .intro {
     display: flex;
     gap: 10rem;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .info-font {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0rem;
+  }
+
+  .projects-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .img-container > p-image > span > img {
+    width: 100%;
   }
 }
