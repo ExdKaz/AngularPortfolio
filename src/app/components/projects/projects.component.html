@@ -1,31 +1,35 @@
 <section class="projects">
-  <div class="purple-dot"><span class="title">Projects</span>.</div>
+  <div class="purple-dot">
+    <span class="title">{{ LABELS.TITLE }}</span
+    >.
+  </div>
   <div class="projects-detail">
     <div class="project-info">
       <div class="img-container">
-        <img
-          src="../../assets/images/weather.png"
-          alt="weatherApp.png"
-          class="proj-img"
+        <p-image
+          [src]="LABELS.WEATHERSRC"
+          alt="Image"
+          width="380"
+          [preview]="true"
         />
       </div>
-      <h2>Weather App</h2>
+      <h2>{{ LABELS.WEATHERTITLE }}</h2>
       <p>
-        A weather app made using Angular 15, With real time data from Rapid Api.
+        {{ LABELS.WEATHERINFO }}
       </p>
     </div>
     <div class="project-info">
       <div class="img-container">
-        <img
-          src="../../assets/images/dash.png"
-          alt="weatherApp.png"
-          class="proj-img"
+        <p-image
+          [src]="LABELS.SPOTIFYSRC"
+          alt="Image"
+          width="570"
+          [preview]="true"
         />
       </div>
-      <h2>Spotify Clone</h2>
+      <h2>{{ LABELS.SPOTIFYTITLE }}</h2>
       <p>
-        A Spotify Clone made using Angular 17, With real time data from Spotify
-        Developers Api.
+        {{ LABELS.SPOTIFYINFO }}
       </p>
     </div>
   </div>
