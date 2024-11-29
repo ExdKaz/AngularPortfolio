@@ -115,7 +115,7 @@ h2 {
   }
 
   .info-font {
-    font-size: 3rem;
+    font-size: 4rem !important;
     font-weight: bold;
     margin: 0rem;
   }
@@ -128,5 +128,9 @@ h2 {
 
   .img-container > p-image > span > img {
     width: 100%;
+  }
+
+  .description {
+    width: -webkit-fill-available;
   }
 }
