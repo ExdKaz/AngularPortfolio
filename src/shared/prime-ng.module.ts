@@ -52,6 +52,7 @@ import { FocusTrapModule } from 'primeng/focustrap';
 import { RippleModule } from 'primeng/ripple';
 import { AutoFocusModule } from 'primeng/autofocus';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @NgModule({
   declarations: [],
@@ -163,6 +164,7 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
     CheckboxModule,
     CalendarModule,
     AutoCompleteModule
-  ]
+  ],
+  providers: [DialogService, DynamicDialogRef]
 })
 export class PrimeNgModule { }
