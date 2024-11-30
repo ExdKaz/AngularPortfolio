@@ -94,6 +94,10 @@ h2 {
   width: 570px;
 }
 
+.p-toolbar {
+  padding: 0.5rem 0;
+}
+
 @media only screen and (min-width: 1920px) {
   body {
     padding: 0 20rem;
@@ -136,5 +140,14 @@ h2 {
 
   .p-toolbar {
     padding: 0.5rem 0;
+  }
+
+  .pad {
+    padding: 0 0.2rem !important;
+  }
+
+  .img-div[_ngcontent-ng-c72128322] {
+    width: 2rem !important;
+    height: 2rem !important;
   }
 }
