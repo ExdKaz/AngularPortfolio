@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { PrimeNgModule } from '../../../shared/prime-ng.module';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [PrimeNgModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
