@@ -3,6 +3,9 @@ import { PrimeNgModule } from '../../../shared/prime-ng.module';
 import { LABELS } from '../../../shared/Labels';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Contact } from '../../../shared/contact.modal';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { MessageService } from 'primeng/api';
+import { SharedService } from '../../../shared/shared.service';
 
 @Component({
   selector: 'app-contact',
@@ -14,10 +17,18 @@ import { Contact } from '../../../shared/contact.modal';
 export class ContactComponent {
 
   LABELS: any;
+  TOAST: any;
   contactForm: any = new Contact();
+  visible: boolean = false;
+  toastObj: any = {
+    severity: '',
+    summary: '',
+    detail: ''
+  };
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private sharedService: SharedService) {
     this.LABELS = LABELS.contact;
+    this.TOAST = LABELS.toast;
     this.form();
   }
 
@@ -31,9 +42,21 @@ export class ContactComponent {
     })
   }
 
-  submit() {
+  submit(event: Event) {
+    event.preventDefault();
+    console.log(event.target as HTMLFormElement);
+
     if (this.contactForm.status === 'VALID') {
       console.log('Valid', this.contactForm);
+      emailjs.sendForm(this.LABELS.EMAILJS.SERVICEID, this.LABELS.EMAILJS.TEMPLATEID, event.target as HTMLFormElement, { publicKey: this.LABELS.EMAILJS.PUBLICKEY }).then((response) => {
+        console.log('response', response.text);
+        this.setToastData(true);
+      },
+        (error) => {
+          console.log('error', (error as EmailJSResponseStatus).text);
+          this.setToastData(false);
+        }
+      )
     } else {
       console.log('Invalid', this.contactForm);
     }
@@ -42,5 +65,27 @@ export class ContactComponent {
   cancel() {
     this.contactForm.reset();
   }
+
+  setToastData(success: boolean) {
+
+    if (success) {
+      this.toastObj = {
+        'severity': this.TOAST.SUCCESS.severity,
+        'summary': this.TOAST.SUCCESS.summary,
+        'detail': this.TOAST.SUCCESS.detail
+      }
+      this.sharedService.updateToastMessage(this.toastObj)
+    } else {
+      this.toastObj = {
+        'severity': this.TOAST.ERROR.severity,
+        'summary': this.TOAST.ERROR.summary,
+        'detail': this.TOAST.ERROR.detail
+      }
+      this.sharedService.updateToastMessage(this.toastObj)
+    }
+
+  }
+
+
 
 }

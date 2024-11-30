@@ -32,6 +32,23 @@ export const LABELS = {
         ERRORMESSAGE: {
             REQUIRED: 'is Required.',
             PATTERN: 'Please enter valid '
+        },
+        EMAILJS: {
+            SERVICEID: 'gmail',
+            TEMPLATEID: 'Angular',
+            PUBLICKEY: 'RX7rbtF1GnQqra-_G'
+        }
+    },
+    toast: {
+        SUCCESS: {
+            'severity': 'success',
+            'summary': 'Success',
+            'detail': 'Email Sent'
+        },
+        FAILURE: {
+            'severity': 'error',
+            'summary': 'Error',
+            'detail': 'Error'
         }
     }
 }

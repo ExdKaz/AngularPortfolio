@@ -1,4 +1,4 @@
-<form class="grid" [formGroup]="contactForm">
+<form class="grid" [formGroup]="contactForm" (submit)="submit($event)">
   @for(item of LABELS.FORM; track item){
   <div>
     <p-inputGroup>
@@ -9,6 +9,7 @@
         pInputText
         [placeholder]="item.type"
         [formControlName]="item.type"
+        [name]="item.type"
       />
     </p-inputGroup>
     @if(contactForm.get(item.type)?.invalid &&
@@ -37,11 +38,12 @@
       pInputTextarea
       [autoResize]="true"
       formControlName="Comments"
+      name="Comments"
     >
     </textarea>
   </p-inputGroup>
   <div class="modal-btn">
-    <p-button label="Send" severity="success" (click)="submit()" />
+    <p-button label="Send" severity="success" type="submit" />
     <p-button label="Cancel" severity="danger" (click)="cancel()" />
   </div>
 </form>

@@ -53,6 +53,7 @@ import { RippleModule } from 'primeng/ripple';
 import { AutoFocusModule } from 'primeng/autofocus';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [],
@@ -165,6 +166,6 @@ import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
     CalendarModule,
     AutoCompleteModule
   ],
-  providers: [DialogService, DynamicDialogRef]
+  providers: [DialogService, DynamicDialogRef, MessageService]
 })
 export class PrimeNgModule { }
