@@ -1,7 +1,8 @@
 export const LABELS = {
     navbar: {
         TITLE: 'Portfolio',
-        NAVITEMS: ['Home', 'Projects', 'About']
+        NAVITEMS: ['Home', 'Projects', 'About'],
+        MODALTITLE: 'Send a Message',
     },
     intoduction: {
         NAME: "Hey, I'm Abhishek",
@@ -20,5 +21,17 @@ export const LABELS = {
         SPOTIFYSRC: '../../assets/images/dash.png',
         SPOTIFYTITLE: 'Spotify Clone',
         SPOTIFYINFO: 'A Spotify Clone made using Angular 17, With real time data from Spotify Developers Api.'
+    },
+    contact: {
+        FORM: [
+            { type: 'Firstname', icon: 'pi pi-user' },
+            { type: 'Lastname', icon: 'pi pi-user' },
+            { type: 'Email', icon: 'pi pi-envelope' },
+            { type: 'Phone', icon: 'pi pi-phone' }
+        ],
+        ERRORMESSAGE: {
+            REQUIRED: 'is Required.',
+            PATTERN: 'Please enter valid '
+        }
     }
 }

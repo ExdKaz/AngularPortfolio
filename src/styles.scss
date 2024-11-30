@@ -99,6 +99,12 @@ h2 {
   padding: 0.5rem 0;
 }
 
+.error {
+  color: #d9342b;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
 @media only screen and (min-width: 1920px) {
   body {
     padding: 0 20rem;
@@ -153,5 +159,11 @@ h2 {
   }
   .nav-links {
     gap: 0.7rem !important;
+  }
+
+  .grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem;
   }
 }

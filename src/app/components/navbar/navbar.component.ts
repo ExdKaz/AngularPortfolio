@@ -23,7 +23,7 @@ export class NavbarComponent {
 
   openDialog() {
     this.ref = this.dialogService.open(ContactComponent, {
-      header: 'Select a Product',
+      header: this.LABELS.MODALTITLE,
       modal: true,
       breakpoints: {
         '960px': '75vw',
