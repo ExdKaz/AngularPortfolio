@@ -103,6 +103,7 @@ h2 {
   color: #d9342b;
   font-weight: 500;
   font-size: 0.75rem;
+  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
 }
 
 .mobile {
@@ -111,11 +112,27 @@ h2 {
 
 .p-message .p-message-summary {
   font-weight: 700;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.1rem;
+  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
+}
+
+.p-dialog .p-dialog-header .p-dialog-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
+}
+
+.p-message .p-message-detail {
+  margin-left: 0.5rem;
+  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
 }
 
 .p-menu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
   color: rgba(0, 0, 0, 0.87);
+  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
+}
+
+.p-inputgroup .p-inputtext {
   font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
 }
 
@@ -191,5 +208,6 @@ h2 {
   .p-message .p-message-wrapper {
     padding: 1rem 1.25rem;
     font-size: 12px;
+    font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
   }
 }

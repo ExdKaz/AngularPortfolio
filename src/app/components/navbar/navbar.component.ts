@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PrimeNgModule } from '../../../shared/prime-ng.module';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { LABELS } from '../../../shared/Labels';
 import { ContactComponent } from '../contact/contact.component';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
@@ -13,7 +13,7 @@ import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  constructor(public dialogService: DialogService) {
+  constructor(public dialogService: DialogService, private router: Router) {
     this.LABELS = LABELS.navbar;
     this.navItems = this.LABELS.NAVITEMS;
     this.items = this.LABELS.MOBILENAVITEMS.map((item: any) => ({
@@ -38,10 +38,20 @@ export class NavbarComponent {
   }
 
   onMenuClick(event: any) {
-    if (event === 'Home' || event === 'Projects' || event === 'About') {
-
-    } else {
+    if (event === 'Contact') {
       this.openDialog()
+    } else if (event === 'Resume') {
+      this.downloadResume();
+    } else {
+      this.router.navigate(['/' + event])
     }
+  }
+
+  downloadResume() {
+    const fileUrl = 'assets/Abhishek_Rana_Resume_final.pdf'; // Path to the PDF in assets
+    const anchor = document.createElement('a');
+    anchor.href = fileUrl;
+    anchor.download = 'Abhishek_Rana_Resume_final.pdf'; // Suggested file name
+    anchor.click();
   }
 }

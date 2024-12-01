@@ -13,7 +13,18 @@
     }
   </div>
   <div class="p-toolbar-group-end">
-    <div class="img-div pointer" (click)="openDialog()"></div>
+    <i
+      class="pi pi-paperclip"
+      pTooltip="Download Resume"
+      tooltipPosition="bottom"
+      (click)="downloadResume()"
+    ></i>
+    <div
+      class="img-div pointer"
+      (click)="openDialog()"
+      pTooltip="Contact"
+      tooltipPosition="bottom"
+    ></div>
   </div>
 </p-toolbar>
 

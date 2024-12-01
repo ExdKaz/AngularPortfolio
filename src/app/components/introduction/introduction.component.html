@@ -9,7 +9,7 @@
       {{ LABELS.INTRO }}
     </p>
     <div class="btn-div">
-      <p-button class="purple-btn" [label]="LABELS.GETINTOUCH" />
+      <p-button class="purple-btn" [label]="LABELS.GETINTOUCH" (click)="openDialog()" />
       <p-button class="white-btn" [label]="LABELS.BROWSEPROJECTS" />
     </div>
   </div>

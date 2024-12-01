@@ -6,16 +6,20 @@ export const routes: Routes = [
         loadComponent: () => import('./components/dashboard/dashboard.component').then(m => m.DashboardComponent),
         pathMatch: 'full'
     },
-    // {
-    //     path: 'Home',
-    //     loadComponent: () => import('./app.component').then(m => m.AppComponent),
-    // },
-    // {
-    //     path: 'Projects',
-    //     loadComponent: () => import('./app.component').then(m => m.AppComponent),
-    // },
-    // {
-    //     path: 'About',
-    //     loadComponent: () => import('./app.component').then(m => m.AppComponent),
-    // }
+    {
+        path: 'Home',
+        loadComponent: () => import('./components/dashboard/dashboard.component').then(m => m.DashboardComponent),
+    },
+    {
+        path: 'Projects',
+        loadComponent: () => import('./app.component').then(m => m.AppComponent),
+    },
+    {
+        path: 'About',
+        loadComponent: () => import('./app.component').then(m => m.AppComponent),
+    },
+    {
+        path: 'Skills',
+        loadComponent: () => import('./app.component').then(m => m.AppComponent),
+    }
 ];

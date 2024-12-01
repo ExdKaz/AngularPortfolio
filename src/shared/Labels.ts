@@ -1,7 +1,7 @@
 export const LABELS = {
     navbar: {
         TITLE: 'Portfolio',
-        NAVITEMS: ['Home', 'Projects', 'About'],
+        NAVITEMS: ['Home', 'Projects', 'About', 'Skills'],
         MOBILENAVITEMS: [
             {
                 label: 'Home',
@@ -16,10 +16,17 @@ export const LABELS = {
                 icon: 'pi pi-book'
             },
             {
+                label: 'Skills',
+                icon: 'pi pi-sliders-h'
+            },
+            {
+                label: 'Resume',
+                icon: 'pi pi-paperclip'
+            },
+            {
                 label: 'Contact',
                 icon: 'pi pi-comments'
             }
-
         ],
         MODALTITLE: 'Send a Message',
     },
@@ -30,7 +37,8 @@ export const LABELS = {
         INTRO: "An innovative, purpose-driven engineer contributed my learning into building web applications & solutions for enterprises.Seeking to work in a professional ambiance that provides a space to contribute my skills towards the growth of the organization.",
         GETINTOUCH: "Get In Touch",
         BROWSEPROJECTS: "Browse Projects",
-        IMAGESRC: "../../assets/images/me.jpg"
+        IMAGESRC: "../../assets/images/me.jpg",
+        MODALTITLE: 'Send a Message',
     },
     projects: {
         TITLE: 'Projects',
