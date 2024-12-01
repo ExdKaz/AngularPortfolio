@@ -2,6 +2,25 @@ export const LABELS = {
     navbar: {
         TITLE: 'Portfolio',
         NAVITEMS: ['Home', 'Projects', 'About'],
+        MOBILENAVITEMS: [
+            {
+                label: 'Home',
+                icon: 'pi pi-home'
+            },
+            {
+                label: 'Projects',
+                icon: 'pi pi-briefcase'
+            },
+            {
+                label: 'About',
+                icon: 'pi pi-book'
+            },
+            {
+                label: 'Contact',
+                icon: 'pi pi-comments'
+            }
+
+        ],
         MODALTITLE: 'Send a Message',
     },
     intoduction: {

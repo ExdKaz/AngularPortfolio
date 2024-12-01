@@ -16,10 +16,15 @@ export class NavbarComponent {
   constructor(public dialogService: DialogService) {
     this.LABELS = LABELS.navbar;
     this.navItems = this.LABELS.NAVITEMS;
+    this.items = this.LABELS.MOBILENAVITEMS.map((item: any) => ({
+      ...item,
+      command: () => this.onMenuClick(item.label),
+    }));
   }
   LABELS: any;
   navItems: any
   ref: DynamicDialogRef | undefined;
+  items: any;
 
   openDialog() {
     this.ref = this.dialogService.open(ContactComponent, {
@@ -30,5 +35,13 @@ export class NavbarComponent {
         '640px': '90vw'
       },
     });
+  }
+
+  onMenuClick(event: any) {
+    if (event === 'Home' || event === 'Projects' || event === 'About') {
+
+    } else {
+      this.openDialog()
+    }
   }
 }

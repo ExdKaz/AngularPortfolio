@@ -1,3 +1,9 @@
+@if(showInfo){
+<div class="card">
+  <p-messages [(value)]="messages" [closable]="false" />
+</div>
+}
+
 <form class="grid" [formGroup]="contactForm" (submit)="submit($event)">
   @for(item of LABELS.FORM; track item){
   <div>

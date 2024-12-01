@@ -54,6 +54,7 @@ import { AutoFocusModule } from 'primeng/autofocus';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { MessageService } from 'primeng/api';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
   declarations: [],
@@ -110,7 +111,8 @@ import { MessageService } from 'primeng/api';
     DropdownModule,
     CheckboxModule,
     CalendarModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    MenuModule
   ],
   exports: [
     ButtonModule,
@@ -164,7 +166,8 @@ import { MessageService } from 'primeng/api';
     DropdownModule,
     CheckboxModule,
     CalendarModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    MenuModule
   ],
   providers: [DialogService, DynamicDialogRef, MessageService]
 })

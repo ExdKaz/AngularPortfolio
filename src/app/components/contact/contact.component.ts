@@ -6,6 +6,7 @@ import { Contact } from '../../../shared/contact.modal';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { MessageService } from 'primeng/api';
 import { SharedService } from '../../../shared/shared.service';
+import { Message } from 'primeng/api';
 
 @Component({
   selector: 'app-contact',
@@ -25,6 +26,8 @@ export class ContactComponent {
     summary: '',
     detail: ''
   };
+  messages: any = [{ severity: 'error', summary: 'Error:', detail: 'Please enter valid details before submitting.' }];
+  showInfo: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private sharedService: SharedService) {
     this.LABELS = LABELS.contact;
@@ -58,12 +61,13 @@ export class ContactComponent {
         }
       )
     } else {
-      console.log('Invalid', this.contactForm);
+      this.showInfo = true;
     }
   }
 
   cancel() {
     this.contactForm.reset();
+    this.showInfo = false;
   }
 
   setToastData(success: boolean) {
