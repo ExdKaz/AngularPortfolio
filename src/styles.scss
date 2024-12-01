@@ -114,6 +114,11 @@ h2 {
   padding-bottom: 0.2rem;
 }
 
+.p-menu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
+}
+
 @media only screen and (min-width: 1920px) {
   body {
     padding: 0 20rem;
