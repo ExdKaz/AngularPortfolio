@@ -1,7 +1,7 @@
 export const LABELS = {
     navbar: {
         TITLE: 'Portfolio',
-        NAVITEMS: ['Home', 'Projects', 'About', 'Skills'],
+        NAVITEMS: ['Home', 'Projects', 'Experience', 'Skills'],
         MOBILENAVITEMS: [
             {
                 label: 'Home',
@@ -12,7 +12,7 @@ export const LABELS = {
                 icon: 'pi pi-briefcase'
             },
             {
-                label: 'About',
+                label: 'Experience',
                 icon: 'pi pi-book'
             },
             {
