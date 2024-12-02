@@ -1,6 +1,8 @@
 <p-toolbar class="desktop">
   <div class="p-toolbar-group-start nav-items">
-    <span class="pointer purple-hover nav-title">{{ LABELS.TITLE }}</span>
+    <span class="pointer purple-hover nav-title" routerLink="/">{{
+      LABELS.TITLE
+    }}</span>
   </div>
   <div class="p-toolbar-group-center nav-links">
     @for(items of navItems; track items){
@@ -32,7 +34,9 @@
 
 <p-toolbar class="mobile">
   <div class="p-toolbar-group-start nav-items">
-    <span class="pointer purple-hover nav-title">{{ LABELS.TITLE }}</span>
+    <span class="pointer purple-hover nav-title" routerLink="/">{{
+      LABELS.TITLE
+    }}</span>
   </div>
 
   <div class="p-toolbar-group-end">
