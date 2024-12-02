@@ -3,14 +3,21 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: '',
-        loadComponent: () => import('./components/dashboard/dashboard.component').then(m => m.DashboardComponent),
+        loadComponent: () => import('./components/introduction/introduction.component').then(m => m.IntroductionComponent),
         pathMatch: 'full'
     },
     {
         path: 'Home',
-        loadComponent: () => import('./components/dashboard/dashboard.component').then(m => m.DashboardComponent),
+        loadComponent: () => import('./components/introduction/introduction.component').then(m => m.IntroductionComponent),
     },
-
+    {
+        path: 'Projects',
+        loadComponent: () => import('./components/projects/projects.component').then(m => m.ProjectsComponent),
+    },
+    {
+        path: 'Experience',
+        loadComponent: () => import('./components/experience/experience.component').then(m => m.ExperienceComponent),
+    },
     {
         path: '**',
         loadComponent: () => import('./components/unavailable/unavailable.component').then(m => m.UnavailableComponent),
