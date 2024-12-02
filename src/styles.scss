@@ -235,5 +235,10 @@ p-accordionTab {
   .intro,
   .projects {
     padding: 0 0.5rem;
+    padding-top: 2rem;
+  }
+
+  .title {
+    font-size: 2rem !important;
   }
 }
