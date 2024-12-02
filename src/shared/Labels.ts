@@ -77,5 +77,20 @@ export const LABELS = {
             'summary': 'Error',
             'detail': 'Error'
         }
+    },
+    experience: {
+        ACCORDIAN: [
+            {
+                company: 'Capgemini',
+                url: 'assets/images/CAP.PA_BIG.png',
+                title: ['Designation : ', 'Skills : ', 'Experience : '],
+                content: {
+                    designation: 'Senior Software Engineer',
+                    skills: ['Angular', ' Spring Boot', ' React', ' Angular Unit Testing', ' Git & Github', ' Jira'],
+                    experience: '3 yrs 3 mos',
+
+                }
+            }
+        ]
     }
 }
