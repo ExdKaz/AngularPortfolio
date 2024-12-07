@@ -92,5 +92,17 @@ export const LABELS = {
                 }
             }
         ]
+    },
+    skills: {
+        SKILLSLIST: [
+            { title: 'Angular', imageUrl: 'assets/images/programing.png', class: 'angular', experience: '3 yrs', value: [{ label: '', value: 80, color: '#34d399' }] },
+            { title: 'React', imageUrl: 'assets/images/physics.png', class: 'react', experience: 'Trained', value: [{ label: '', value: 60, color: '#34d399' }] },
+            { title: 'Spring Boot', imageUrl: 'assets/images/spring.png', class: 'spring', experience: 'Trained', value: [{ label: '', value: 60, color: '#34d399' }] },
+            { title: 'Html 5', imageUrl: 'assets/images/html-5.png', class: 'html', experience: '3 yrs', value: [{ label: '', value: 80, color: '#34d399' }] },
+            { title: 'Css', imageUrl: 'assets/images/css-3.png', class: 'css', experience: '3 yrs', value: [{ label: '', value: 80, color: '#34d399' }] },
+            { title: 'Javascript', imageUrl: 'assets/images/js.png', class: 'js', experience: '3yrs', value: [{ label: '', value: 80, color: '#34d399' }] },
+            { title: 'Git/Github', imageUrl: 'assets/images/git.png', class: 'git', experience: '3yrs', value: [{ label: '', value: 70, color: '#34d399' }] },
+            { title: 'Bitbucket', imageUrl: 'assets/images/bitbucket.png', class: 'bitbucket', experience: '4 mon', value: [{ label: '', value: 50, color: '#34d399' }] },
+        ]
     }
 }

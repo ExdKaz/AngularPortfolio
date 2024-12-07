@@ -55,6 +55,7 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { MessageService } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
+import { MeterGroupModule } from 'primeng/metergroup';
 
 @NgModule({
   declarations: [],
@@ -112,7 +113,8 @@ import { MenuModule } from 'primeng/menu';
     CheckboxModule,
     CalendarModule,
     AutoCompleteModule,
-    MenuModule
+    MenuModule,
+    MeterGroupModule
   ],
   exports: [
     ButtonModule,
@@ -167,7 +169,8 @@ import { MenuModule } from 'primeng/menu';
     CheckboxModule,
     CalendarModule,
     AutoCompleteModule,
-    MenuModule
+    MenuModule,
+    MeterGroupModule
   ],
   providers: [DialogService, DynamicDialogRef, MessageService]
 })
