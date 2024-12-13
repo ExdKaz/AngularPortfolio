@@ -4,9 +4,8 @@ import { LABELS } from '../../../shared/Labels';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Contact } from '../../../shared/contact.modal';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-import { MessageService } from 'primeng/api';
 import { SharedService } from '../../../shared/shared.service';
-import { Message } from 'primeng/api';
+
 
 @Component({
   selector: 'app-contact',
