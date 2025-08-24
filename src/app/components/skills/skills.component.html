@@ -1,15 +1,26 @@
-<div class="grid">
-  @for(skill of LABELS.SKILLSLIST; track skill){
-  <p-card
-    [header]="skill.title"
-    [subheader]="skill.experience"
-    [style]="{ width: '360px' }"
-  >
-    <ng-template pTemplate="header">
-      <img alt="Card" [src]="skill.imageUrl" />
-    </ng-template>
-    <p-meterGroup [value]="skill.value" />
-    <ng-template pTemplate="footer"> </ng-template>
-  </p-card>
-  }
-</div>
+<section class="skills">
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="skills-grid">
+    @for(skill of LABELS.SKILLSLIST; track skill){
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img [src]="skill.imageUrl" [alt]="skill.title" />
+      </div>
+      <div class="skill-content">
+        <h3 class="skill-title">{{ skill.title }}</h3>
+        <p class="skill-experience">{{ skill.experience }}</p>
+        <div class="skill-progress">
+          <div class="progress-bar">
+            <div 
+              class="progress-fill" 
+              [style.width.%]="skill.value[0].value"
+              [style.background]="skill.value[0].color">
+            </div>
+          </div>
+          <span class="progress-text">{{ skill.value[0].value }}%</span>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>

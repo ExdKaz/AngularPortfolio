@@ -1,7 +1,7 @@
 export const LABELS = {
     navbar: {
         TITLE: 'Portfolio',
-        NAVITEMS: ['Home', 'Projects', 'Experience', 'Skills'],
+        NAVITEMS: ['Home', 'Projects', 'Experience', 'Skills', 'Contact'],
         MOBILENAVITEMS: [
             {
                 label: 'Home',
@@ -87,7 +87,18 @@ export const LABELS = {
                 content: {
                     designation: 'Senior Software Engineer',
                     skills: ['Angular', ' Spring Boot', ' React', ' Angular Unit Testing', ' Git & Github', ' Jira'],
-                    experience: '3 yrs 3 mos',
+                    experience: '3.5 yrs',
+
+                }
+            },
+            {
+                company: 'Infosys',
+                url: 'assets/images/infosys.png',
+                title: ['Designation : ', 'Skills : ', 'Experience : '],
+                content: {
+                    designation: 'Technology Analyst',
+                    skills: ['Angular', ' Ag-Grid', ' Spring Boot', ' React', ' Angular Unit Testing', ' Git & Github', ' Jira'],
+                    experience: '5 months',
 
                 }
             }

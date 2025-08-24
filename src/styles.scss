@@ -1,23 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
 :root {
-  --black: #24262f;
-  --white: #fcfcfd;
-  --purple: #673ab7;
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --purple: #6366f1;
+  --purple-light: #8b5cf6;
+  --purple-dark: #4338ca;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --blue: #3b82f6;
+  --green: #10b981;
+  --yellow: #f59e0b;
+  --red: #ef4444;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --gradient-primary: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
 }
 html,
 body {
-  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
-  background-color: #fcfcfd;
-  color: var(--black) !important;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif !important;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: var(--gray-800) !important;
   font-size: 0.875rem;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 body {
-  font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
-  color: var(--black) !important;
-  background-color: #fcfcfd;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif !important;
+  color: var(--gray-800) !important;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   font-size: 0.875rem;
   margin: 0;
+  line-height: 1.6;
 }
 
 p-button > button {
@@ -31,6 +57,7 @@ p-button > button {
 
 .purple-hover:hover {
   color: var(--purple);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .purple {
@@ -38,37 +65,76 @@ p-button > button {
 }
 
 .purple-btn > button {
+  background: var(--gradient-primary);
   color: var(--white);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   border: none;
   font-weight: 600;
+  border-radius: 12px;
+  padding: 12px 24px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif !important;
 }
 
 .purple-btn > button:hover {
   cursor: pointer;
-  opacity: 0.8;
-  transition: linear 0.2s;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%);
 }
 
 .white-btn > button {
-  color: var(--black);
-  font-size: 0.75rem;
+  color: var(--gray-700);
+  font-size: 0.875rem;
   background-color: var(--white);
   font-weight: 600;
-  outline: 1px solid var(--black);
+  border: 2px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 12px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif !important;
 }
 
 .white-btn > button:hover {
   cursor: pointer;
-  transition: linear 0.2s;
-  background-color: var(--black);
+  background: var(--gradient-primary);
   color: var(--white);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .title {
-  font-size: 1.5rem !important;
-  font-weight: 700 !important;
-  color: var(--black);
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  color: var(--gray-900);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-title {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  color: var(--gray-900);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
 }
 
 .purple-dot {
@@ -81,6 +147,18 @@ p-button > button {
 .active {
   color: var(--purple);
   font-weight: 600;
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: 1px;
 }
 
 h2 {
@@ -97,9 +175,52 @@ h2 {
 }
 
 .p-toolbar {
-  padding: 0.5rem 0;
-  box-shadow: 0px 5px 15px -3px rgba(19, 19, 19, 0.2) !important;
-  padding: 1rem 1rem !important;
+  padding: 1rem 2rem !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border: none !important;
+  box-shadow: var(--shadow-lg) !important;
+  border-radius: 0 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+}
+
+/* Ensure navbar stays above all content */
+app-navbar {
+  position: relative;
+  z-index: 10000;
+}
+
+/* Ensure PrimeNG overlays don't interfere */
+.p-component-overlay {
+  z-index: 8000 !important;
+}
+
+/* Toast messages should appear above navbar */
+.p-toast {
+  z-index: 10001 !important;
+}
+
+.p-toast-message {
+  z-index: 10001 !important;
+}
+
+.p-toast-message-content {
+  z-index: 10001 !important;
+}
+
+/* Tooltips should appear above navbar */
+.p-tooltip {
+  z-index: 10002 !important;
+}
+
+.p-tooltip-text {
+  z-index: 10002 !important;
+}
+
+.p-tooltip-arrow {
+  z-index: 10002 !important;
 }
 
 .error {
@@ -168,22 +289,23 @@ p-accordionTab {
   .intro {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 3rem;
+    min-height: auto;
+    text-align: center;
   }
 
   .info-font {
-    font-size: 4rem !important;
+    font-size: 3rem !important;
     font-weight: bold;
     margin: 0rem;
     line-height: 1.2;
   }
 
-  .projects-detail {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
   }
 
   .img-container > p-image > span > img {
@@ -195,13 +317,11 @@ p-accordionTab {
   }
 
   .p-toolbar {
-    padding: 0.5rem 0;
-    box-shadow: 0px 5px 15px -3px rgba(19, 19, 19, 0.2) !important;
-    padding: 1rem 0.5rem !important;
+    padding: 0.75rem 1rem !important;
   }
 
   .pad {
-    padding: 0 0.2rem !important;
+    padding: 0 1rem !important;
   }
 
   .img-div[_ngcontent-ng-c72128322] {
@@ -209,12 +329,11 @@ p-accordionTab {
     height: 2rem !important;
   }
   .nav-links {
-    gap: 0.7rem !important;
+    gap: 1rem !important;
   }
 
-  .grid {
-    display: flex !important;
-    flex-direction: column !important;
+  .skills-grid {
+    grid-template-columns: 1fr !important;
     gap: 1rem;
   }
 
@@ -228,18 +347,37 @@ p-accordionTab {
   .p-message .p-message-wrapper {
     padding: 1rem 1.25rem;
     font-size: 12px;
-    font-family: "Poppins", "Poppins Placeholder", sans-serif !important;
+    font-family: "Inter", "Segoe UI", "Roboto", sans-serif !important;
   }
 
   .experience,
   .intro,
-  .projects {
-    padding: 0 0.5rem;
-    padding-top: 2rem;
+  .projects,
+  .skills {
+    padding: 2rem 0.5rem;
   }
 
   .title {
     font-size: 1.5rem !important;
+  }
+
+  .section-title {
+    font-size: 2rem !important;
+  }
+
+  .outer-image-div {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .btn-div {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .btn-div p-button {
+    width: 100%;
   }
 }
 

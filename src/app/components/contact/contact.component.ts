@@ -80,9 +80,9 @@ export class ContactComponent {
       this.sharedService.updateToastMessage(this.toastObj)
     } else {
       this.toastObj = {
-        'severity': this.TOAST.ERROR.severity,
-        'summary': this.TOAST.ERROR.summary,
-        'detail': this.TOAST.ERROR.detail
+        'severity': this.TOAST.FAILURE.severity,
+        'summary': this.TOAST.FAILURE.summary,
+        'detail': this.TOAST.FAILURE.detail
       }
       this.sharedService.updateToastMessage(this.toastObj)
     }

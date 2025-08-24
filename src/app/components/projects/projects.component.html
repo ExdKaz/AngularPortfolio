@@ -1,22 +1,58 @@
 <section class="projects">
-  <div class="projects-detail">
-    <div class="project-info">
-      <div class="img-container img-container-1">
-        <p-image [src]="LABELS.WEATHERSRC" alt="Image" [preview]="true" />
+  <h2 class="section-title">Featured Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-image">
+        <p-image [src]="LABELS.WEATHERSRC" alt="Weather App" [preview]="true" />
+        <div class="project-overlay">
+          <div class="project-links">
+            <button class="project-btn">
+              <i class="pi pi-eye"></i>
+              Live Demo
+            </button>
+            <button class="project-btn">
+              <i class="pi pi-github"></i>
+              Code
+            </button>
+          </div>
+        </div>
       </div>
-      <h2>{{ LABELS.WEATHERTITLE }}</h2>
-      <p>
-        {{ LABELS.WEATHERINFO }}
-      </p>
+      <div class="project-content">
+        <h3 class="project-title">{{ LABELS.WEATHERTITLE }}</h3>
+        <p class="project-description">{{ LABELS.WEATHERINFO }}</p>
+        <div class="project-tech">
+          <span class="tech-tag">Angular 15</span>
+          <span class="tech-tag">Rapid API</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+      </div>
     </div>
-    <div class="project-info">
-      <div class="img-container img-container-2">
-        <p-image [src]="LABELS.SPOTIFYSRC" alt="Image" [preview]="true" />
+    
+    <div class="project-card">
+      <div class="project-image">
+        <p-image [src]="LABELS.SPOTIFYSRC" alt="Spotify Clone" [preview]="true" />
+        <div class="project-overlay">
+          <div class="project-links">
+            <button class="project-btn">
+              <i class="pi pi-eye"></i>
+              Live Demo
+            </button>
+            <button class="project-btn">
+              <i class="pi pi-github"></i>
+              Code
+            </button>
+          </div>
+        </div>
       </div>
-      <h2>{{ LABELS.SPOTIFYTITLE }}</h2>
-      <p>
-        {{ LABELS.SPOTIFYINFO }}
-      </p>
+      <div class="project-content">
+        <h3 class="project-title">{{ LABELS.SPOTIFYTITLE }}</h3>
+        <p class="project-description">{{ LABELS.SPOTIFYINFO }}</p>
+        <div class="project-tech">
+          <span class="tech-tag">Angular 17</span>
+          <span class="tech-tag">Spotify API</span>
+          <span class="tech-tag">RxJS</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>

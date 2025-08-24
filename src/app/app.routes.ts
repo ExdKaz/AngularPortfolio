@@ -23,6 +23,10 @@ export const routes: Routes = [
         loadComponent: () => import('./components/skills/skills.component').then(m => m.SkillsComponent),
     },
     {
+        path: 'Contact',
+        loadComponent: () => import('./components/contact/contact.component').then(m => m.ContactComponent),
+    },
+    {
         path: '**',
         loadComponent: () => import('./components/unavailable/unavailable.component').then(m => m.UnavailableComponent),
     }

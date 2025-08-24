@@ -1,29 +1,35 @@
 <section class="experience">
-  <p-accordion
-    class="w-full"
-    expandIcon="pi pi-plus"
-    collapseIcon="pi pi-minus"
-  >
-    @for(items of LABELS.ACCORDIAN; track items){
-    <p-accordionTab>
-      <ng-template pTemplate="header">
-        <span class="flex align-items-center gap-2 w-full">
-          <img [src]="items.url" class="exp-img" [alt]="items.company" />
-        </span>
-      </ng-template>
-      <p class="m-0 bold">
-        <span class="purple">{{ items.title[0] }}</span>
-        {{ items.content.designation }}
-      </p>
-      <p class="m-0 bold">
-        <span class="purple">{{ items.title[1] }}</span>
-        {{ items.content.skills }}.
-      </p>
-      <p class="m-0 bold">
-        <span class="purple">{{ items.title[2] }}</span>
-        {{ items.content.experience }}.
-      </p>
-    </p-accordionTab>
+  <h2 class="section-title">Professional Experience</h2>
+  <div class="experience-timeline">
+    @for(item of LABELS.ACCORDIAN; track item; let i = $index){
+    <div class="timeline-item" [class.timeline-item-left]="i % 2 === 0" [class.timeline-item-right]="i % 2 === 1">
+      <div class="timeline-content">
+        <div class="company-logo">
+          <img [src]="item.url" [alt]="item.company" />
+        </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <h3 class="company-name">{{ item.company }}</h3>
+            <div class="experience-duration">{{ item.content.experience }}</div>
+          </div>
+          <div class="experience-details">
+            <div class="detail-item">
+              <span class="detail-label">{{ item.title[0] }}</span>
+              <span class="detail-value">{{ item.content.designation }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">{{ item.title[1] }}</span>
+              <div class="skills-tags">
+                @for(skill of item.content.skills; track skill){
+                <span class="skill-tag">{{ skill.trim() }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
     }
-  </p-accordion>
+  </div>
 </section>

@@ -1,3 +1,11 @@
 .pad {
-  padding: 0 1rem;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .pad {
+    padding: 0 1rem;
+  }
 }

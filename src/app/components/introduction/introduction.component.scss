@@ -1,23 +1,45 @@
 .name {
-  font-size: 1.5rem;
-  margin-bottom: 0rem;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--gray-600);
+  font-weight: 500;
 }
 
 .info-font {
-  font-size: 5rem;
-  font-weight: bold;
+  font-size: 4rem;
+  font-weight: 900;
   margin: 0rem;
+  line-height: 1.1;
+  color: var(--gray-900);
 }
 
 .btn-div {
   display: flex;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .intro {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 5rem;
+  min-height: 80vh;
+}
+
+.description {
+  flex: 1;
+}
+
+.description p {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin: 1.5rem 0;
+}
+
+.image {
+  flex: 0 0 auto;
 }
 
 .profile-img {
@@ -28,14 +50,25 @@
   object-position: center center;
   object-fit: cover;
   image-rendering: auto;
+  transition: all 0.3s ease;
 }
 
 .outer-image-div {
-  width: 20rem;
-  height: 20rem;
-  padding: 1.5rem;
+  width: 22rem;
+  height: 22rem;
+  padding: 1rem;
   border-radius: 50%;
-  border: 1px solid var(--purple);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  transition: all 0.3s ease;
+  border: 3px solid var(--purple);
+}
+
+.outer-image-div:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--purple-light);
 }
 
 .vibrate-1:hover {
