@@ -194,7 +194,7 @@ app-navbar {
 
 /* Ensure PrimeNG overlays don't interfere */
 .p-component-overlay {
-  z-index: 8000 !important;
+  z-index: 99999 !important;
 }
 
 /* Toast messages should appear above navbar */
