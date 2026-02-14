@@ -12,6 +12,7 @@ import { LABELS } from '../../../shared/Labels';
 export class ExperienceComponent implements OnInit {
 
   LABELS: any;
+  tye:any;
 
   constructor() {
     this.LABELS = LABELS.experience;
@@ -19,7 +20,39 @@ export class ExperienceComponent implements OnInit {
 
   ngOnInit() {
     this.calculateExperiencePerCompany();
+    this.getTotalExperience()
   }
+
+  getTotalExperience(): string {
+  if (!this.LABELS?.ACCORDIAN?.length) {
+    return '0 months';
+  }
+
+  // First company joining date
+  const firstJoiningDateStr = this.LABELS.ACCORDIAN[0].content.joiningDate;
+  const startDate = this.parseDate(firstJoiningDateStr);
+  const endDate = new Date();
+
+  let months =
+    (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+    (endDate.getMonth() - startDate.getMonth());
+
+  if (endDate.getDate() < startDate.getDate()) {
+    months--;
+  }
+
+  months = Math.max(months, 0);
+
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+
+  let result = '';
+  if (years > 0) result += `${years} year${years > 1 ? 's' : ''} `;
+  if (remainingMonths > 0) result += `${remainingMonths} month${remainingMonths > 1 ? 's' : ''}`;
+
+  return result.trim() || '0 months';
+}
+
 
   calculateExperiencePerCompany() {
     const accordian = this.LABELS.ACCORDIAN;
