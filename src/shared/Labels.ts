@@ -37,7 +37,7 @@ export const LABELS = {
         INTRO: "An innovative, purpose-driven engineer contributed my learning into building web applications & solutions for enterprises.Seeking to work in a professional ambiance that provides a space to contribute my skills towards the growth of the organization.",
         GETINTOUCH: "Get In Touch",
         BROWSEPROJECTS: "Browse Projects",
-        IMAGESRC: "../../assets/images/me.jpg",
+        IMAGESRC: "../../assets/images/abhi.jpeg",
         MODALTITLE: 'Send a Message',
     },
     projects: {
@@ -87,8 +87,7 @@ export const LABELS = {
                 content: {
                     designation: 'Senior Software Engineer',
                     skills: ['Angular', ' Spring Boot', ' React', ' Angular Unit Testing', ' Git & Github', ' Jira'],
-                    experience: '3.5 yrs',
-
+                    joiningDate: '12/10/2021'
                 }
             },
             {
@@ -98,7 +97,7 @@ export const LABELS = {
                 content: {
                     designation: 'Technology Analyst',
                     skills: ['Angular', ' Ag-Grid', ' Spring Boot', ' React', ' Angular Unit Testing', ' Git & Github', ' Jira'],
-                    experience: '5 months',
+                    joiningDate: '27/02/2025'
 
                 }
             }
