@@ -75,7 +75,7 @@ export const LABELS = {
         FAILURE: {
             'severity': 'error',
             'summary': 'Error',
-            'detail': 'Error'
+            'detail': 'Internal Server Error'
         }
     },
     experience: {
