@@ -48,10 +48,10 @@ export class NavbarComponent {
   }
 
   downloadResume() {
-    const fileUrl = 'assets/Abhishek_Rana_Resume_final.pdf'; // Path to the PDF in assets
+    const fileUrl = 'assets/Abhishek_Rana_Resume.pdf'; // Path to the PDF in assets
     const anchor = document.createElement('a');
     anchor.href = fileUrl;
-    anchor.download = 'Abhishek_Rana_Resume_final.pdf'; // Suggested file name
+    anchor.download = 'Abhishek_Rana_Resume.pdf'; // Suggested file name
     anchor.click();
   }
 }
